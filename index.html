@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>InterSync | Digitally Remodeling Organizations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body{
+  font-family:"Segoe UI",sans-serif;
+  background:#fff;
+  color:#000;
+  padding-top:70px;
+}
+section{padding:80px 0;}
+
+/* NAV */
+.navbar{background:#fff;}
+.navbar-brand{font-weight:700;color:#000!important;}
+.nav-link{color:#000;}
+.nav-link:hover{color:#ff7a00;}
+
+/* HERO */
+.hero-section{
+  height:85vh;
+  background:url("addons/images/home-bg.jpeg") center/cover no-repeat;
+  position:relative;
+}
+.hero-overlay{
+  background:rgba(0,0,0,.55);
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+.hero-text {
+  position: absolute;
+  top: 50%; /* vertically center */
+  left: 60px; /* distance from left */
+  transform: translateY(-50%); /* perfect vertical centering */
+  max-width: 520px;
+  color: #fff;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: dropIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+.hero-text span {
+  color: #ff7a00;
+  display: inline-block;
+  animation: popBounce 0.6s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* PULL-UP REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(80px);
+  transition:all .9s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FEATURES */
+/* FEATURES */
+.feature-card {
+  background: #fff;
+  color: #000;
+  padding: 40px 25px;
+  border-radius: 22px;
+  position: relative;
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* CURVY ORANGE HIGHLIGHT */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    #ff7a00 25%, 
+    transparent 26%,
+    transparent 75%,
+    #ff7a00 76%
+  );
+  background-repeat: no-repeat;
+  background-size: 50% 6px, 6px 50%;
+  background-position: top left, top left;
+}
+
+/* HOVER POP */
+.feature-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+
+
+
+/* STATS */
+.stat-circle{
+  width:130px;
+  height:130px;
+  border:3px solid #ff7a00;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.8rem;
+  font-weight:700;
+  margin:auto;
+}
+.jump{
+  animation:jump 1.6s ease-in-out infinite;
+}
+@keyframes jump{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-14px);}
+}
+
+/* PARTNERS */
+.partner-img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:4px solid #000;
+  padding:12px;
+  transition:.3s;
+}
+.partner-img:hover{
+  border-color:#ff7a00;
+  transform:scale(1.08);
+}
+
+footer{
+  background:#000;
+  color:#fff;
+  padding:20px 0;
+}
+
+/* extras */
+
+.brand-logo {
+  width: 36px;        /* small size */
+  height: 36px;
+  border-radius: 50%; /* makes it round */
+  object-fit: cover;  /* ensures it fits inside the circle */
+  border: 2px solid #ff7a00; /* optional border to highlight it */
+}
+
+.slanted-infinity {
+  display: inline-block;
+  transform: rotate(-140deg); /* slant it left-to-right */
+  font-size: 66px; /* adjust size */
+  color: #ff7a00; /* optional color */
+}
+
+/* HERO TEXT DROP ANIMATION */
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  transform: translateY(-100px); /* start above */
+  opacity: 0;
+  animation: dropIn 1s ease-out forwards;
+  animation-delay: 0.5s; /* optional delay */
+}
+
+.hero-text span {
+  color: #ff7a00; /* brand orange */
+  display: inline-block; /* required for transform */
+  animation: popBounce 0.6s ease forwards;
+  animation-delay: 1.5s; /* starts after drop */
+}
+
+/* Drop keyframes */
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Pop/Bounce keyframes for span */
+@keyframes popBounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.tagline{
+  font-size: 10px;
+  
+}
+
+/* ===========================
+   MOBILE RESPONSIVENESS FIX
+   =========================== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  /* NAV BRAND TEXT */
+  .navbar-brand {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  /* HERO */
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-text {
+    position: relative;   /* remove absolute on mobile */
+    top: auto;
+    left: auto;
+    transform: none;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  /* FEATURES */
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  /* STATS */
+  .stat-circle {
+    width: 110px;
+    height: 110px;
+    font-size: 1.5rem;
+  }
+
+  /* PARTNERS */
+  .partner-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="#">
+  <!-- Small round logo -->
+  <img src="addons/images/logo.jpg" alt="InterSync Logo" class="brand-logo me-2">
+  InterSync |<Span class="tagline"> Digitally Remodeling Organizations</Span>  
+</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navMenu">
+<ul class="navbar-nav gap-4">
+<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+<div >
+<div class="hero-text">
+<h1>Step Into The Future With </br><span>InterSync</span>!!</h1>
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="reveal">
+<div class="container">
+<h2 class="text-center fw-bold mb-5">Our Services</h2>
+<div class="row g-4">
+<div class="col-md-4"><div class="feature-card"><h5>MPS</h5><p>Managed Print Services</p></div></div>
+<div class="col-md-4"><div class="feature-card"><h5>DMS</h5><p>Document Management Services</p></div></div>
+<div class="col-md-4"><div class="feature-card"><h5>Equipment</h5><p>Computer & Printing Equipment</p></div></div>
+<div class="col-md-4"><div class="feature-card"><h5>Supplies</h5><p>Printer Supplies / Consumables </p></div></div>
+<div class="col-md-4"><div class="feature-card"><h5>Installations</h5><p>Printer Installation, Maintenance & Repais</p></div></div>
+<div class="col-md-4"><div class="feature-card"><h5>IT</h5><p> IT Equipment And Accessories</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="reveal" id="stats">
+<div class="container">
+<div class="row text-center g-4">
+<div class="col-md-3"><div class="stat-circle" data-target="7">0</div><p>Locations</p></div>
+<div class="col-md-3"><div class="stat-circle" data-target="3000">0</div><p>Installations</p></div>
+<div class="col-md-3"><div class="stat-circle" data-target="1200">0</div><p>Users</p></div>
+<div class="col-md-3"><div class="stat-circle" data-target="37">0</div><p>Staff</p></div>
+</div>
+</div>
+</section>
+
+<!-- PARTNERS -->
+<section class="reveal">
+<div class="container text-center">
+<h2 class="fw-bold mb-4">Our Partners</h2>
+<div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="row justify-content-center g-4">
+<img class="partner-img" src="addons/images/papercut.png">
+<img class="partner-img" src="addons/images/cisco.webp">
+<img class="partner-img" src="addons/images/lenovo.png">
+</div>
+</div>
+<div class="carousel-item">
+<div class="row justify-content-center g-4">
+<img class="partner-img" src="addons/images/hp.png">
+<img class="partner-img" src="addons/images/vertiv.png">
+<img class="partner-img" src="addons/images/chrometa.png">
+</div>
+</div>
+<div class="carousel-item">
+<div class="row justify-content-center g-4">
+<img class="partner-img" src="addons/images/sophos.webp">
+<img class="partner-img" src="addons/images/fortinet.png">
+<img class="partner-img" src="addons/images/dell.jpeg">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="text-center">
+<p class="mb-0">&copy; 2026 InterSync. All Rights Reserved. <!--<br/> Powered By Ogmabyte--> </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+const stats=document.getElementById("stats");
+let counted=false;
+
+window.addEventListener("scroll",()=>{
+  reveals.forEach(sec=>{
+    if(sec.getBoundingClientRect().top<window.innerHeight-120){
+      sec.classList.add("active");
+    }
+  });
+
+  if(!counted && stats.getBoundingClientRect().top<window.innerHeight-120){
+    countStats();
+    counted=true;
+  }
+});
+
+function countStats(){
+  document.querySelectorAll(".stat-circle").forEach(circle=>{
+    const target=+circle.dataset.target;
+    let count=0;
+    const speed=target/80;
+
+    const update=()=>{
+      count+=speed;
+      if(count<target){
+        circle.innerText=Math.ceil(count);
+        requestAnimationFrame(update);
+      }else{
+        circle.innerText=target+"+";
+        circle.classList.add("jump");
+      }
+    };
+    update();
+  });
+}
+</script>
+
+</body>
+</html>
+
+

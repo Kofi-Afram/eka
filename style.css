@@ -1,0 +1,988 @@
+/* BASE STYLES */
+/*ABOUT CSS*/
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333333; /* Dark Gray text */
+  padding-top: 70px;
+  background: #F2F2F2; /* Light Gray background */
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #001F3F; /* Navy Blue headings */
+}
+
+/* HERO */
+.about-hero {
+  min-height: 60vh;
+  background: url("addons/images/the team.jpeg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-title {
+  color: #39CCCC; /* Teal accent */
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+
+.hero-sub {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+
+/* VALUES / CARDS */
+.value-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  height: 100%;
+  border-left: 4px solid #FF851B; /* Orange accent stripe */
+}
+
+.value-card h5 {
+  color: #001F3F;
+}
+
+.value-card p {
+  color: #333333;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* CEO SECTION */
+.ceo-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 800px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ceo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #001F3F; /* Navy Blue border */
+}
+
+.ceo-text h4 {
+  color: #001F3F;
+}
+
+.ceo-quote {
+  font-style: italic;
+  color: #333333;
+  margin-top: 10px;
+}
+
+/* CTA SECTION */
+.cta-section {
+  background: hsl(180, 20%, 96%); /* Teal */
+  color: #161515;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-section h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-section .btn {
+  display: inline-block;
+  padding: 12px 40px;       /* Makes it oval-ish */
+  background: #ff7a00;       /* Orange background */
+  color: #fff;               /* White text */
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 3px solid #ff7a00; /* Border same as background */
+  border-radius: 50px;       /* Oval / ellipse shape */
+  text-decoration: none;
+  transition: transform 1.0s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.cta-section .btn:hover {
+   transform: scale(1.1);          /* Slightly bigger */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2); /* Bigger shadow */
+  background: #fff;               /* Invert background */
+  color: #ff7a00;                 /* Invert text */
+  border-color: #ff7a00;          /* Keep border same */
+
+}
+
+/* FOOTER */
+.footer {
+  background: #080808; 
+  color: #fff;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+/* PULL-UP ANIMATION */
+.pull-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.pull-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* SERVICE CSS */
+/* ================= GLOBAL ================= */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  color: #000;
+  padding-top: 70px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: #fff;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #000 !important;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #ff7a00;
+}
+
+/* ================= PULL-UP ANIMATION ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= SERVICE INTRO CARD ================= */
+.service-intro-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 40px 30px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-intro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= CAROUSEL ================= */
+#servicesCarousel .carousel-inner img {
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+  object-fit: cover;
+  height: 350px; /* adjust as needed */
+}
+
+/* ================= CATEGORIES CTA ================= */
+.category-btn {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  border: 2px solid #ff7a00;
+  border-radius: 50px; /* oval/capsule shape */
+  padding: 12px 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.category-btn:hover {
+  background: #ff7a00;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* ================= MEDIA ================= */
+@media(max-width: 768px) {
+  .hero-text {
+    position: static;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+ /*HARDWARE CSS*/
+
+body{
+  font-family:"Segoe UI",sans-serif;
+  background:#fff;
+  color:#000;
+  padding:60px;
+}
+
+.back {
+  display: flex;
+  align-items: center;      /* vertically centers the arrow with the title */
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 30px;     /* optional oval */
+  border: 2px solid #000;
+  transition: all 0.3s ease;
+  margin-top: 0px; /* tweak until perfectly aligned */
+}
+
+.back:hover {
+  background: #ff7a00;
+  color: #fff;
+  border-color: #ff7a00;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between; /* pushes left and right */
+  align-items: center;            /* vertically center */
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 5px;
+}
+
+/* PRODUCT CARD */
+.product-card{
+  display:flex;
+  gap:50px;
+  align-items:flex-start;
+  margin-bottom:90px;
+}
+
+.product-left{
+  width:30%;
+}
+
+.product-right{
+  width:70%;
+}
+
+/* CAROUSEL */
+.carousel{
+  position:relative;
+  width:520px;
+  height:320px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.carousel-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ARROWS */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  border:none;
+  font-size:22px;
+  padding:8px 14px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.arrow:hover{
+  background:#ff7a00;
+}
+
+.arrow.left{ left:12px; }
+.arrow.right{ right:12px; }
+
+/* MORE CTA */
+.more-box{
+  margin-top:12px;
+  text-align:right;
+}
+
+.more-box small{
+  font-weight:600;
+}
+
+.cta-small{
+  display:inline-block;
+  padding:6px 16px;
+  border:2px solid #ff7a00;
+  border-radius:30px;
+  color:#000;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.cta-small:hover{
+  background:#ff7a00;
+  color:#fff;
+}
+
+/* FINAL CTA */
+.final-cta{
+  margin-top:100px;
+}
+
+.cta-phone{
+  display:inline-block;
+  margin-top:10px;
+  padding:12px 26px;
+  border-radius:40px;
+  background:#ff7a00;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+
+/*SOFTWARE CSS*/
+/* ================= GLOBAL ================= */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  color: #000;
+  padding-top: 70px;
+}
+
+/* ================= PAGE HEADER ================= */
+.page-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+
+/*
+.back-s{
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.back-s:hover {
+  background: #ff7a00;
+  color: #F2F2F2;
+  transition: 0.8s ease;
+}
+*/
+
+/* ================= SOFTWARE CARD ================= */
+.software-card {
+  background: #fff;
+  border-radius: 20px;
+  border: 2px solid #eee;
+  position: relative;
+  padding: 30px 25px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+/* Curvy Orange Highlight on top-left */
+.software-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 6px;
+  background: #ff7a00;
+  border-top-left-radius: 20px;
+}
+
+.software-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 60%;
+  background: #ff7a00;
+  border-top-left-radius: 20px;
+}
+
+.software-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= WHAT IT OFFERS ================= */
+.what-it-offers h4 {
+  color: #ff7a00;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Bullets List */
+.offers-list {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.offer-bullet {
+  font-weight: 600;
+  color: #000;
+  margin: 12px 0;
+  opacity: 0; /* hidden initially for animation */
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+}
+
+/* Slide-in animation for bullets */
+/* Animation base */
+.animate {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+/* Slide from left */
+.animate.left {
+  transform: translateX(-40px);
+}
+
+/* Slide from right */
+.animate.right {
+  transform: translateX(40px);
+}
+
+/* When visible */
+.animate.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.cta-button {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #ff7a00;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: transform 0.9s ease, box-shadow 0.5s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  background-color:#ffffff;
+  color: #000;
+} 
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Contact css */
+/* ===============================
+   CONTACT PAGE – GLOBAL
+================================ */
+
+/* NAV */
+.navbar{background:#fff;}
+.navbar-brand{font-weight:700;color:#000!important;}
+.nav-link{color:#000;}
+.nav-link:hover{color:#ff7a00;}
+
+.contact-header {
+  background: #fff;
+  padding: 80px 0 40px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.back-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ff7a00;
+}
+
+.page-subtitle {
+  margin-top: 10px;
+  color: #444;
+  max-width: 600px;
+}
+
+/* ===============================
+   CONTACT SECTION
+================================ */
+.contact-section {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.contact-info p {
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-details li {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* ===============================
+   FORM
+================================ */
+.contact-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #ff7a00;
+}
+
+/* ===============================
+   CTA BUTTONS
+================================ */
+.cta-btn {
+  display: inline-block;
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 999px; /* OVAL */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(255,122,0,0.35);
+}
+
+/* OUTLINE CTA */
+.cta-outline {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 2px solid #ff7a00;
+  color: #ff7a00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-outline:hover {
+  background: #ff7a00;
+  color: #fff;
+}
+
+/* ===============================
+   TRUSTED BRANDS
+================================ */
+.trusted-section {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.trusted-section h2 {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.trusted-section p {
+  color: #444;
+  font-weight: 500;
+}
+
+/* TRUSTED BRANDS – POP OUT */
+.trusted-section {
+  background: #f9f9f9; /* off-white, not pure white */
+  padding: 70px 20px;
+  border-radius: 26px;
+  margin: 80px auto;
+  max-width: 1100px;
+
+  /* floating card feel */
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.08),
+    0 6px 14px rgba(0, 0, 0, 0.04);
+
+  position: relative;
+}
+
+/* subtle orange accent line (top-left) */
+.trusted-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 6px;
+  background: #ff7a00;
+  border-top-left-radius: 26px;
+  border-bottom-right-radius: 26px;
+}
+
+/* title */
+.trusted-section h2 {
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+/* brands text */
+.trusted-section p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 0.3px;
+}
+
+/* hover micro-lift (optional but sexy) */
+.trusted-section:hover {
+  transform: translateY(-6px);
+  transition: transform 0.4s ease;
+}
+
+
+/* ===============================
+   MAP SECTION
+================================ */
+.map-section {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.map-wrapper {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+}
+
+.map-cta {
+  margin-top: 30px;
+}
+
+/* FINAL CTA CARD */
+.final-cta {
+  padding: 80px 20px;
+  margin: 100px 0;
+}
+
+.cta-card {
+  background: #fff; /* white card */
+  border-radius: 28px;
+  box-shadow: 0 20px 48px rgba(0,0,0,.1), 0 8px 20px rgba(0,0,0,.05);
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* LEFT SIDE: TEXT + CTA */
+.cta-text h2 {
+  font-weight: 700;
+  color: #000;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.cta-text .cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #ff7a00;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px; /* oval shape */
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-text .cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,122,0,.4);
+}
+
+/* SOCIALS BELOW CTA */
+.cta-socials {
+  margin-top: 20px;
+}
+
+.cta-socials .social {
+  margin-right: 15px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cta-socials .social:hover {
+  color: #ff7a00;
+}
+
+/* RIGHT SIDE: IMAGE */
+.cta-image img {
+  width: 220px; /* slightly larger */
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+}
+
+/* RESPONSIVE */
+@media(max-width: 950px){
+  .cta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-image {
+    margin-top: 25px;
+  }
+}
+
+.site-footer {
+  width: 100%; /* full width */
+  background: #000; /* black background */
+  color: #fff; /* white text */
+  padding: 3px 0; /* vertical padding */
+  text-align: center;
+  position: relative; /* keeps footer in flow */
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* extras*/
+.hyperlink{
+  color: #ff7a00;
+}
+
+.brand-logo {
+  width: 36px;        /* small size */
+  height: 36px;
+  border-radius: 50%; /* makes it round */
+  object-fit: cover;  /* ensures it fits inside the circle */
+  border: 2px solid #ff7a00; /* optional border to highlight it */
+}
+
+
+
+/* ===========================
+   MOBILE RESPONSIVENESS (GLOBAL)
+   =========================== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+    padding-top: 70px; /* keeps navbar spacing */
+  }
+
+  section,
+  .section {
+    padding: 60px 20px;
+  }
+
+  /* NAV */
+  .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  /* HERO (about / home / services) */
+  .hero-text,
+  .about-hero .container {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 15px;
+  }
+
+  .hero-text h1,
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  /* CONTACT GRID */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* PRODUCT / SERVICE LAYOUTS */
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-left,
+  .product-right {
+    width: 100%;
+  }
+
+  /* PARTNERS */
+  .partner-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* CTA CARD */
+  .cta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-image img {
+    width: 180px;
+    margin-top: 20px;
+  }
+}
